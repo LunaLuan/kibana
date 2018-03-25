@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 3427:
+/***/ 3430:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44,34 +44,34 @@ webpackJsonp([2],{
  */
 
 __webpack_require__(21);
-__webpack_require__(3428);
+__webpack_require__(3431);
 __webpack_require__(216);
 __webpack_require__(217);
 __webpack_require__(218);
 __webpack_require__(219);
-__webpack_require__(143);
+__webpack_require__(145);
 __webpack_require__(220);
 __webpack_require__(21).bootstrap();
 
 /***/ }),
 
-/***/ 3428:
+/***/ 3431:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(3429);
+__webpack_require__(3432);
 
 /***/ }),
 
-/***/ 3429:
+/***/ 3432:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(60);
+__webpack_require__(61);
 
 var _module = __webpack_require__(2).get('app/sense');
 
@@ -80,26 +80,26 @@ _module.run(function () {
     _module.setupResizeCheckerForRootEditors = function () {};
 });
 
-__webpack_require__(21).setRootTemplate(__webpack_require__(3431)).setRootController(function () {
-    window.QUnit = __webpack_require__(3432);
+__webpack_require__(21).setRootTemplate(__webpack_require__(3434)).setRootController(function () {
+    window.QUnit = __webpack_require__(3435);
 
-    __webpack_require__(3433);
-    __webpack_require__(60);
+    __webpack_require__(3436);
+    __webpack_require__(61);
     /* global QUnit */
     QUnit.config.autostart = false;
     QUnit.init();
 
-    __webpack_require__(3434);
-    __webpack_require__(3435);
+    __webpack_require__(3437);
     __webpack_require__(3438);
-    __webpack_require__(3439);
-    __webpack_require__(3440);
+    __webpack_require__(3441);
     __webpack_require__(3442);
-    __webpack_require__(3454);
-    __webpack_require__(3455);
+    __webpack_require__(3443);
+    __webpack_require__(3445);
     __webpack_require__(3457);
     __webpack_require__(3458);
-    __webpack_require__(3459);
+    __webpack_require__(3460);
+    __webpack_require__(3461);
+    __webpack_require__(3462);
 
     console.log('all tests loaded');
     QUnit.start();
@@ -107,14 +107,14 @@ __webpack_require__(21).setRootTemplate(__webpack_require__(3431)).setRootContro
 
 /***/ }),
 
-/***/ 3431:
+/***/ 3434:
 /***/ (function(module, exports) {
 
 module.exports = "  <style type=\"text/css\">\r\n    #editor_container {\r\n      display: none;\r\n      position: absolute;\r\n      top: 20px;\r\n      bottom: 20px;\r\n      left: 20px;\r\n      right: 20px;\r\n      z-index: 200;\r\n      border: 1px solid #333;\r\n    }\r\n\r\n    #output_container {\r\n      display: none;\r\n      position: absolute;\r\n      height: 250px;\r\n      width: 350px;\r\n      bottom: 20px;\r\n      right: 20px;\r\n      z-index: 201;\r\n      border: 1px solid #333;\r\n    }\r\n\r\n    #editor, #output {\r\n      height: 100%;\r\n      width: 100%;\r\n      position: relative;\r\n    }\r\n  </style>\r\n<div id=\"qunit\"></div>\r\n<div id=\"editor_container\">\r\n  <div id=\"editor\"></div>\r\n</div>\r\n<div id=\"output_container\">\r\n  <div id=\"output\"></div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 3432:
+/***/ 3435:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -2110,20 +2110,20 @@ module.exports = "  <style type=\"text/css\">\r\n    #editor_container {\r\n    
 
 /***/ }),
 
-/***/ 3433:
+/***/ 3436:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 3434:
+/***/ 3437:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _es = __webpack_require__(381);
+var _es = __webpack_require__(382);
 
 var _window$QUnit = window.QUnit,
     test = _window$QUnit.test,
@@ -2153,7 +2153,7 @@ test('no body', function () {
 
 /***/ }),
 
-/***/ 3435:
+/***/ 3438:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2161,8 +2161,8 @@ test('no body', function () {
 
 var _ = __webpack_require__(0);
 var utils = __webpack_require__(283);
-var collapsingTests = __webpack_require__(3436);
-var expandingTests = __webpack_require__(3437);
+var collapsingTests = __webpack_require__(3439);
+var expandingTests = __webpack_require__(3440);
 
 var _window$QUnit = window.QUnit,
     test = _window$QUnit.test,
@@ -2226,29 +2226,29 @@ _.each(expandingTests.split(/^=+$/m), function (fixture) {
 
 /***/ }),
 
-/***/ 3436:
+/***/ 3439:
 /***/ (function(module, exports) {
 
 module.exports = "==========\r\nString only 1\r\n-------------------------------------\r\n\"\"\" hello\r\nto you \"\"\"\r\n-------------------------------------\r\n\" hello\\nto you \"\r\n==========\r\nString only 2\r\n-------------------------------------\r\n\"\"\" \r\nstartning with new lines and ending as well\r\n \"\"\"\r\n-------------------------------------\r\n\"startning with new lines and ending as well\"\r\n==========\r\nStrings in requests\r\n-------------------------------------\r\n{\r\n  \"f\": { \"somefield\" : \"\"\"\r\ntest\r\ntest2\r\n\"\"\" },\r\n  \"g\": { \"script\" : \"\"\"second + \"\\\";\"\"\" },\r\n  \"h\": 1,\r\n  \"script\": \"a + 2\"\r\n}\r\n-------------------------------------\r\n{\r\n  \"f\": { \"somefield\" : \"test\\ntest2\" },\r\n  \"g\": { \"script\" : \"second + \\\"\\\\\\\";\" },\r\n  \"h\": 1,\r\n  \"script\": \"a + 2\"\r\n}"
 
 /***/ }),
 
-/***/ 3437:
+/***/ 3440:
 /***/ (function(module, exports) {
 
 module.exports = "==========\r\nScripts in requests\r\n-------------------------------------\r\n{\r\n  \"f\": { \"script\" : { \"inline\": \"test\\ntest\\\\2\" } },\r\n  \"g\": { \"script\" : \"second + \\\"\\\\\\\";\" },\r\n  \"f\": \"short with \\\\\",\r\n  \"h\": 1,\r\n  \"script\": \"a + 2\"\r\n}\r\n-------------------------------------\r\n{\r\n  \"f\": { \"script\" : { \"inline\": \"\"\"\r\ntest\r\ntest\\2\r\n\"\"\" } },\r\n  \"g\": { \"script\" : \"\"\"second + \"\\\";\"\"\" },\r\n  \"f\": \"short with \\\\\",\r\n  \"h\": 1,\r\n  \"script\": \"a + 2\"\r\n}\r\n"
 
 /***/ }),
 
-/***/ 3438:
+/***/ 3441:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var _ = __webpack_require__(0);
-var url_pattern_matcher = __webpack_require__(574);
-var autocomplete_engine = __webpack_require__(151);
+var url_pattern_matcher = __webpack_require__(577);
+var autocomplete_engine = __webpack_require__(153);
 
 var _window$QUnit = window.QUnit,
     test = _window$QUnit.test,
@@ -2505,7 +2505,7 @@ function t(name, meta) {
 
 /***/ }),
 
-/***/ 3439:
+/***/ 3442:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2513,7 +2513,7 @@ function t(name, meta) {
 
 var _ = __webpack_require__(0);
 var url_params = __webpack_require__(1057);
-var autocomplete_engine = __webpack_require__(151);
+var autocomplete_engine = __webpack_require__(153);
 
 var _window$QUnit = window.QUnit,
     test = _window$QUnit.test,
@@ -2596,7 +2596,7 @@ function t(name, meta, insert_value) {
 
 /***/ }),
 
-/***/ 3440:
+/***/ 3443:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2604,7 +2604,7 @@ function t(name, meta, insert_value) {
 
 var _ = __webpack_require__(0);
 var curl = __webpack_require__(1058);
-var curlTests = __webpack_require__(3441);
+var curlTests = __webpack_require__(3444);
 
 var _window$QUnit = window.QUnit,
     test = _window$QUnit.test,
@@ -2641,14 +2641,14 @@ _.each(curlTests.split(/^=+$/m), function (fixture) {
 
 /***/ }),
 
-/***/ 3441:
+/***/ 3444:
 /***/ (function(module, exports) {
 
 module.exports = "==========\r\nCurl 1\r\n-------------------------------------\r\ncurl -XPUT 'http://localhost:9200/twitter/tweet/1' -d '{\r\n  \"user\" : \"kimchy\",\r\n  \"post_date\" : \"2009-11-15T14:12:12\",\r\n  \"message\" : \"trying out Elastic Search\"\r\n}'\r\n-------------------------------------\r\nPUT /twitter/tweet/1\r\n{\r\n  \"user\" : \"kimchy\",\r\n  \"post_date\" : \"2009-11-15T14:12:12\",\r\n  \"message\" : \"trying out Elastic Search\"\r\n}\r\n==========\r\nCurl 2\r\n-------------------------------------\r\ncurl -XGET \"localhost/twitter/tweet/1?version=2\" -d '{\r\n   \"message\" : \"elasticsearch now has versioning support, double cool!\"\r\n}'\r\n-------------------------------------\r\nGET /twitter/tweet/1?version=2\r\n{\r\n   \"message\" : \"elasticsearch now has versioning support, double cool!\"\r\n}\r\n===========\r\nCurl 3\r\n-------------------------------------\r\ncurl -XPOST https://localhost/twitter/tweet/1?version=2 -d '{\r\n   \"message\" : \"elasticsearch now has versioning support, double cool!\"\r\n}'\r\n-------------------------------------\r\nPOST /twitter/tweet/1?version=2\r\n{\r\n   \"message\" : \"elasticsearch now has versioning support, double cool!\"\r\n}\r\n=========\r\nCurl 4\r\n-------------------------------------\r\ncurl -XPOST https://localhost/twitter\r\n-------------------------------------\r\nPOST /twitter\r\n==========\r\nCurl 5\r\n-------------------------------------\r\ncurl -X POST https://localhost/twitter/\r\n-------------------------------------\r\nPOST /twitter/\r\n=============\r\nCurl 6\r\n-------------------------------------\r\ncurl -s -XPOST localhost:9200/missing-test -d'\r\n{\r\n  \"mappings\": {\r\n  }\r\n}'\r\n-------------------------------------\r\nPOST /missing-test\r\n{\r\n  \"mappings\": {\r\n  }\r\n}\r\n=========================\r\nCurl 7\r\n-------------------------------------\r\ncurl 'localhost:9200/missing-test/doc/_search?pretty' -d'\r\n{\r\n  \"query\": {\r\n  },\r\n}'\r\n-------------------------------------\r\nGET /missing-test/doc/_search?pretty\r\n{\r\n  \"query\": {\r\n  },\r\n}\r\n===========================\r\nCurl 8\r\n-------------------------------------\r\ncurl localhost:9200/ -d'\r\n{\r\n  \"query\": {\r\n  }\r\n}'\r\n-------------------------------------\r\nGET /\r\n{\r\n  \"query\": {\r\n  }\r\n}\r\n====================================\r\nCurl Script\r\n-------------------------------------\r\n#!bin/sh\r\n\r\n// test something\r\ncurl 'localhost:9200/missing-test/doc/_search?pretty' -d'\r\n{\r\n  \"query\": {\r\n  },\r\n}'\r\n\r\n\r\ncurl -XPOST https://localhost/twitter\r\n\r\n#someother comments\r\ncurl localhost:9200/ -d'\r\n{\r\n  \"query\": {\r\n  }\r\n}'\r\n\r\n\r\n-------------------\r\n# test something\r\nGET /missing-test/doc/_search?pretty\r\n{\r\n  \"query\": {\r\n  },\r\n}\r\n\r\nPOST /twitter\r\n\r\n#someother comments\r\nGET /\r\n{\r\n  \"query\": {\r\n  }\r\n}\r\n====================================\r\nCurl with some text\r\n-------------------------------------\r\nThis is what I meant:\r\n\r\ncurl 'localhost:9200/missing-test/doc/_search?'\r\n\r\nThis, however, does work:\r\ncurl 'localhost:9200/missing/doc/_search?'\r\n-------------------\r\n### This is what I meant:\r\n\r\nGET /missing-test/doc/_search?\r\n\r\n### This, however, does work:\r\nGET /missing/doc/_search?\r\n"
 
 /***/ }),
 
-/***/ 3442:
+/***/ 3445:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2660,9 +2660,9 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var kb = __webpack_require__(575);
+var kb = __webpack_require__(578);
 var mappings = __webpack_require__(284);
-var autocomplete_engine = __webpack_require__(151);
+var autocomplete_engine = __webpack_require__(153);
 
 var _window$QUnit = window.QUnit,
     test = _window$QUnit.test,
@@ -2815,7 +2815,7 @@ type_test("Type integration 5", [["index1", "index2"], ["type1.2", "type1.1"]], 
 
 /***/ }),
 
-/***/ 3454:
+/***/ 3457:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3085,13 +3085,13 @@ test("Aliases", function () {
 
 /***/ }),
 
-/***/ 3455:
+/***/ 3458:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _jquery = __webpack_require__(13);
+var _jquery = __webpack_require__(12);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -3103,9 +3103,9 @@ var _input = __webpack_require__(286);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ace = __webpack_require__(60);
+var ace = __webpack_require__(61);
 
-var editor_input1 = __webpack_require__(3456);
+var editor_input1 = __webpack_require__(3459);
 var utils = __webpack_require__(283);
 
 var aceRange = ace.require("ace/range");
@@ -3441,14 +3441,14 @@ multi_req_copy_as_curl_test("start to end, with comment", editor_input1, { start
 
 /***/ }),
 
-/***/ 3456:
+/***/ 3459:
 /***/ (function(module, exports) {
 
 module.exports = "GET _search\r\n{\r\n  \"query\": { \"match_all\": {} }\r\n}\r\n\r\n#preceeding comment\r\nGET _stats?level=shards\r\n\r\n#in between comment\r\n\r\nPUT index_1/type1/1\r\n{\r\n  \"f\": 1\r\n}\r\n\r\nPUT index_1/type1/2\r\n{\r\n  \"f\": 2\r\n}\r\n\r\n# comment\r\n\r\n\r\nGET index_1/type1/1/_source?_source_include=f\r\n\r\nDELETE index_2\r\n\r\n"
 
 /***/ }),
 
-/***/ 3457:
+/***/ 3460:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3456,8 +3456,8 @@ module.exports = "GET _search\r\n{\r\n  \"query\": { \"match_all\": {} }\r\n}\r\
 
 var _input = __webpack_require__(286);
 
-var ace = __webpack_require__(60);
-var $ = __webpack_require__(13);
+var ace = __webpack_require__(61);
+var $ = __webpack_require__(12);
 
 var input = void 0;
 
@@ -3636,16 +3636,16 @@ states_test(["start", "json", "json", "start"], 'POST _search\n' + '{\n' + '  "s
 
 /***/ }),
 
-/***/ 3458:
+/***/ 3461:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _output = __webpack_require__(578);
+var _output = __webpack_require__(581);
 
-var ace = __webpack_require__(60);
-var $ = __webpack_require__(13);
+var ace = __webpack_require__(61);
+var $ = __webpack_require__(12);
 var RowParser = __webpack_require__(1059);
 
 var output = void 0;
@@ -3711,7 +3711,7 @@ token_test(["comment", "# GET url", "paren.lparen", "{", "variable", '"f"', "pun
 
 /***/ }),
 
-/***/ 3459:
+/***/ 3462:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3728,9 +3728,9 @@ var _lodash2 = _interopRequireDefault(_lodash);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var input = void 0;
-var kb = __webpack_require__(575);
+var kb = __webpack_require__(578);
 var mappings = __webpack_require__(284);
-var $ = __webpack_require__(13);
+var $ = __webpack_require__(12);
 
 var _window$QUnit = window.QUnit,
     _module = _window$QUnit.module,
@@ -4650,5 +4650,5 @@ context_tests({
 
 /***/ })
 
-},[3427]);
+},[3430]);
 //# sourceMappingURL=sense-tests.bundle.js.map

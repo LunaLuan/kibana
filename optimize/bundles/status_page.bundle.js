@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 2262:
+/***/ 2265:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44,18 +44,18 @@ webpackJsonp([4],{
  */
 
 __webpack_require__(21);
-__webpack_require__(2263);
+__webpack_require__(2266);
 __webpack_require__(216);
 __webpack_require__(217);
 __webpack_require__(218);
 __webpack_require__(219);
-__webpack_require__(143);
+__webpack_require__(145);
 __webpack_require__(220);
 __webpack_require__(21).bootstrap();
 
 /***/ }),
 
-/***/ 2263:
+/***/ 2266:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69,15 +69,15 @@ var _notify = __webpack_require__(22);
 
 __webpack_require__(263);
 
-__webpack_require__(2264);
-
 __webpack_require__(2267);
+
+__webpack_require__(2270);
 
 var _modules = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var chrome = __webpack_require__(21).setRootTemplate(__webpack_require__(2268)).setRootController('ui', function ($http, buildNum, buildSha) {
+var chrome = __webpack_require__(21).setRootTemplate(__webpack_require__(2271)).setRootController('ui', function ($http, buildNum, buildSha) {
   var ui = this;
   ui.loading = false;
 
@@ -152,19 +152,19 @@ _modules.uiModules.get('kibana').config(function (appSwitcherEnsureNavigationPro
 
 /***/ }),
 
-/***/ 2264:
+/***/ 2267:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _format_number = __webpack_require__(2265);
+var _format_number = __webpack_require__(2268);
 
 var _format_number2 = _interopRequireDefault(_format_number);
 
 var _modules = __webpack_require__(2);
 
-var _status_page_metric = __webpack_require__(2266);
+var _status_page_metric = __webpack_require__(2269);
 
 var _status_page_metric2 = _interopRequireDefault(_status_page_metric);
 
@@ -190,7 +190,7 @@ _modules.uiModules.get('kibana', []).filter('statusMetric', function () {
 
 /***/ }),
 
-/***/ 2265:
+/***/ 2268:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -233,26 +233,26 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 2266:
+/***/ 2269:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"status_metric_wrapper col-md-4\">\r\n  <div class=\"content\">\r\n    <h3 class=\"title\">{{ metric.name }}</h3>\r\n    <h4 class=\"average\">{{ metric.value | statusMetric: metric.type}}</h4>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 2267:
+/***/ 2270:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 2268:
+/***/ 2271:
 /***/ (function(module, exports) {
 
 module.exports = "<div data-test-subj=\"statusPageContainer\" class=\"container overall_state_default overall_state_{{ui.serverState}}\">\r\n  <header>\r\n    <h1>\r\n      Status: <span class=\"overall_state_color\">{{ ui.serverStateMessage }}</span>\r\n      <i class=\"fa overall_state_color state_icon\" />\r\n      <span class=\"pull-right\">\r\n        {{ ui.name }}\r\n      </span>\r\n    </h1>\r\n  </header>\r\n\r\n  <div class=\"row metrics_wrapper\">\r\n    <div ng-repeat=\"metric in ui.metrics\">\r\n      <status-page-metric metric=\"metric\"></status-page-metric>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row statuses_wrapper\">\r\n    <h3>Status Breakdown</h3>\r\n\r\n    <div ng-if=\"!ui.statuses && ui.loading\" class=\"statuses_loading\">\r\n      <span class=\"spinner\"></span>\r\n    </div>\r\n\r\n    <h4 ng-if=\"!ui.statuses && !ui.loading\" class=\"statuses_missing\">\r\n      No status information available\r\n    </h4>\r\n\r\n    <table class=\"statuses\" data-test-subj=\"statusBreakdown\" ng-if=\"ui.statuses\">\r\n      <tr class=\"row\">\r\n        <th class=\"col-xs-4\" scope=\"col\">ID</th>\r\n        <th class=\"col-xs-8\" scope=\"col\">Status</th>\r\n      </tr>\r\n      <tr\r\n        ng-repeat=\"status in ui.statuses\"\r\n        class=\"status status_state_default status_state_{{status.state}} row\">\r\n\r\n        <td class=\"col-xs-4 status_id\">{{status.id}}</td>\r\n        <td class=\"col-xs-8 status_message\">\r\n          <i class=\"fa status_state_color status_state_icon\" />\r\n          {{status.message}}\r\n        </td>\r\n      </tr>\r\n    </table>\r\n  </div>\r\n\r\n  <footer class=\"row\">\r\n    <div class=\"col-xs-12 text-right build-info\">\r\n      Build {{::ui.buildInfo.num}}, Commit SHA {{::ui.buildInfo.sha}}\r\n    </div>\r\n  </footer>\r\n</div>\r\n"
 
 /***/ })
 
-},[2262]);
+},[2265]);
 //# sourceMappingURL=status_page.bundle.js.map

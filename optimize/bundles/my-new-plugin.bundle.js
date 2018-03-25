@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 1247:
+/***/ 1248:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44,18 +44,18 @@ webpackJsonp([5],{
  */
 
 __webpack_require__(21);
-__webpack_require__(2208);
+__webpack_require__(2211);
 __webpack_require__(216);
 __webpack_require__(217);
 __webpack_require__(218);
 __webpack_require__(219);
-__webpack_require__(143);
+__webpack_require__(145);
 __webpack_require__(220);
 __webpack_require__(21).bootstrap();
 
 /***/ }),
 
-/***/ 2208:
+/***/ 2211:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67,15 +67,15 @@ var _moment2 = _interopRequireDefault(_moment);
 
 var _modules = __webpack_require__(2);
 
-var _routes = __webpack_require__(34);
+var _routes = __webpack_require__(35);
 
 var _routes2 = _interopRequireDefault(_routes);
 
 __webpack_require__(263);
 
-__webpack_require__(2235);
+__webpack_require__(2238);
 
-var _index = __webpack_require__(2236);
+var _index = __webpack_require__(2239);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -107,19 +107,19 @@ _modules.uiModules.get('app/my-new-plugin', []).controller('myNewPluginHelloWorl
 
 /***/ }),
 
-/***/ 2235:
+/***/ 2238:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 2236:
+/***/ 2239:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container\" ng-controller=\"myNewPluginHelloWorld\">\n  <div class=\"row\">\n    <div class=\"col-12-sm\">\n      <div class=\"well\">\n        <h2>Congratulations</h2>\n        <p class=\"lead\">You've successfully created your first Kibana Plugin!</p>\n      </div>\n      <h1>{{ title }}</h1>\n      <p class=\"lead\">{{ description }}</p>\n      <p>The current time is {{ currentTime }}</p>\n    </div>\n  </div>\n</div>\n"
 
 /***/ })
 
-},[1247]);
+},[1248]);
 //# sourceMappingURL=my-new-plugin.bundle.js.map
